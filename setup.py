@@ -5,10 +5,10 @@ import glob, versioneer
 
 setup (
     name = "jsonpath_flatten",
-    version = versioneer.get_version (),
+    version = versioneer.get_version(),
     description = "Flatten a dictionary into a single layer with JSONPath keys",
-    long_description = file ("README.rst").read (),
-    cmdclass = versioneer.get_cmdclass (),
+    long_description = open("README.rst", 'r').read(),
+    cmdclass = versioneer.get_cmdclass(),
     classifiers = [
       "Development Status :: 4 - Beta",
       "Intended Audience :: Developers",
@@ -26,8 +26,8 @@ setup (
     package_data = {},
     data_files = [],
     zip_safe = False,
-    install_requires = [line.strip ()
-                        for line in file ("requirements.txt").readlines ()],
+    install_requires = [line.strip()
+                        for line in open("requirements.txt", 'r').readlines()],
     entry_points = {
         "console_scripts": [],
     },
